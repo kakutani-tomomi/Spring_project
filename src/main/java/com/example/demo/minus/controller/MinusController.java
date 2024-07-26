@@ -18,7 +18,7 @@ public class MinusController {
 	}
 
 	@GetMapping("minus")
-	public String showSignUpForm() {
+	public String showMinus() {
 		return "minus.html";
 	}
 
