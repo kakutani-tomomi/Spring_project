@@ -9,14 +9,14 @@
 <body>
 	<h1>計算機</h1>
 	<form action="calcResult" method="post">
-		<input type="text" name="leftNum">
+		<input type="number" name="leftNum">
 		<select name="operator">
 			<option value="＋">＋</option>
 			<option value="－">－</option>
 			<option value="×">×</option>
 			<option value="÷">÷</option>
 		</select>
-		<input type="text" name="rightNum">
+		<input type="number" name="rightNum">
 		<input type="submit" value="=">
 	</form>
 	<p th:text="${result}"></p>
