@@ -10,7 +10,7 @@ public class FizzBuzzService {
 
 	/**
 	 * 3、5、3と5 それぞれの倍数に応じて文字列と数値を格納する
-	 * @return fizubuzz
+	 * @return fizubuzzList
 	 */
 	public List<String> fizzBuzz() {
 		//Listの宣言
