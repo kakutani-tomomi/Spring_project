@@ -20,7 +20,7 @@ public class AnimalController {
 	}
 
 	@GetMapping("animalSearch")
-	public String Animals(Model model) throws IOException {
+	public String AnimalSearch(Model model) throws IOException {
 
 		List<AnimalData> animalsList = animalService.getAnimalList();
 
@@ -30,7 +30,7 @@ public class AnimalController {
 
 	}
 	@GetMapping("animalDetail")
-	public String Animals(@RequestParam("id")String id, Model model) throws IOException {
+	public String AnimalData(@RequestParam("id")String id, Model model) throws IOException {
 
 		AnimalData[] animalData = animalService.getAnimal(id);
 		
