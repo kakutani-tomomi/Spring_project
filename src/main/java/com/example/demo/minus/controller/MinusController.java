@@ -22,7 +22,7 @@ public class MinusController {
 		return "minus.html";
 	}
 
-	@PostMapping("minusCal")
+	@PostMapping("minusResult")
 	public String minus(@RequestParam("leftNum") int leftNum, @RequestParam("rightNum") int rightNum, Model model) {
 
 		int result;

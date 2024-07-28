@@ -1,0 +1,14 @@
+
+■URL一覧
+
+//掛け算
+http://localhost:8080/multi
+
+//fizzbuzz
+http://localhost:8080/fizzBuzz
+
+//引き算
+http://localhost:8080/minus
+
+//計算機
+http://localhost:8080/calculator	

@@ -26,9 +26,9 @@ public class CalculatorController {
 			@RequestParam("operator") String operator, Model model) {
 		try {
 			int result;
-			result = calculatorService.calculation(leftNum,rightNum,operator);
+			result = calculatorService.calculation(leftNum, rightNum, operator);//①左辺②右辺③算術演算子
 			model.addAttribute("result", result);
-			
+
 		} catch (ArithmeticException e) {
 			String errorMessage = "ゼロ除算はできません";
 			model.addAttribute("errorMessage", errorMessage);

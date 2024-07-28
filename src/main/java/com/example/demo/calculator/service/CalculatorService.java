@@ -4,17 +4,21 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService {
-	public int calculation (int leftNum,int rightNum,String operator) throws ArithmeticException{
+	public int calculation(int leftNum, int rightNum, String operator) throws ArithmeticException {
 		int result = 0;
-		if("＋".equals(operator)) {
+		//加算
+		if ("＋".equals(operator)) {
 			result = leftNum + rightNum;
-		}else if("－".equals(operator)) {
+			//減算	
+		} else if ("－".equals(operator)) {
 			result = leftNum - rightNum;
-		}else if("×".equals(operator)) {
+			//除算
+		} else if ("×".equals(operator)) {
 			result = leftNum * rightNum;
-		}else if("÷".equals(operator)) {
+			//剰余算	
+		} else if ("÷".equals(operator)) {
 			result = leftNum / rightNum;
 		}
 		return result;
-		}
 	}
+}
