@@ -49,8 +49,8 @@ public class AnimalRepository {
 
 		ObjectMapper mapper = new ObjectMapper();
 
-		AnimalData[] animal = mapper.readValue(json, AnimalData[].class);
-		
-		return animal;
+		AnimalData[] animalData = mapper.readValue(json, AnimalData[].class);
+
+		return animalData;
 	}
 }

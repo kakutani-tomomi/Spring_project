@@ -29,13 +29,14 @@ public class AnimalController {
 		return "animal-search.html";
 
 	}
+
 	@GetMapping("animalDetail")
-	public String AnimalData(@RequestParam("id")String id, Model model) throws IOException {
+	public String AnimalData(@RequestParam("id") String id, Model model) throws IOException {
 
 		AnimalData[] animalData = animalService.getAnimal(id);
-		
-         //System.out.println(animalData[0]); テスト用
-		
+
+		//System.out.println(animalData[0]); テスト用
+
 		model.addAttribute("animalData", animalData);
 
 		return "animal-detail.html";

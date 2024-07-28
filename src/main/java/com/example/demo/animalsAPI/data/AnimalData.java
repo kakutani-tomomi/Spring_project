@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class AnimalData {
-	
+
 	@JsonProperty("id")
 	private int id;
 

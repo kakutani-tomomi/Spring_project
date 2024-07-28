@@ -16,6 +16,7 @@ public class AnimalService {
 	public AnimalService(AnimalRepository animalRepository) {
 		this.animalRepository = animalRepository;
 	}
+
 	/**
 	 * 動物の一覧を取得する。
 	 * @return animalList 
@@ -28,6 +29,7 @@ public class AnimalService {
 		return Arrays.asList(animalsList);
 
 	}
+
 	/**
 	 * APIから指定された動物を取得する
 	 * @param id 指定された動物のid
@@ -35,11 +37,10 @@ public class AnimalService {
 	 * @throws IOException
 	 */
 	public AnimalData[] getAnimal(String id) throws IOException {
-		
+
 		AnimalData animal[] = animalRepository.getAnimal(id);
 
 		return animal;
 
 	}
 }
-
