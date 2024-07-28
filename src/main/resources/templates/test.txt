@@ -12,3 +12,6 @@ http://localhost:8080/minus
 
 //計算機
 http://localhost:8080/calculator	
+
+//API
+http://localhost:8080/animalSearch
