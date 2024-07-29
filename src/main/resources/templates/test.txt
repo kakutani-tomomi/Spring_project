@@ -14,4 +14,7 @@ http://localhost:8080/minus
 http://localhost:8080/calculator	
 
 //API
+・動物検索
 http://localhost:8080/animalSearch
+・社員一覧
+http://localhost:8080/employeeList
