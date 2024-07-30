@@ -18,3 +18,8 @@ http://localhost:8080/calculator
 http://localhost:8080/animalSearch
 ・社員一覧
 http://localhost:8080/employeeList
+
+
+■タスク切る
+netstat -ano | find "8080"
+taskkill /f /pid <pidを記述>

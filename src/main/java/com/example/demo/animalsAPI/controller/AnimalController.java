@@ -35,7 +35,7 @@ public class AnimalController {
 
 		AnimalData[] animalData = animalService.getAnimal(id);
 
-		//System.out.println(animalData[0]); テスト用
+		System.out.println(animalData.length);
 
 		model.addAttribute("animalData", animalData);
 
