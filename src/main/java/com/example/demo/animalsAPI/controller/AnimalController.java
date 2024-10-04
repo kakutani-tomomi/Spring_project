@@ -23,9 +23,8 @@ public class AnimalController {
 	public String AnimalSearch(Model model) throws IOException {
 
 		List<AnimalData> animalsList = animalService.getAnimalList();
-
+		
 		model.addAttribute("animalsList", animalsList);
-
 		return "animal-search.html";
 
 	}

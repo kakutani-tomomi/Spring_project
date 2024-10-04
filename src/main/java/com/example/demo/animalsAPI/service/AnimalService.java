@@ -23,7 +23,7 @@ public class AnimalService {
 	 * @throws IOException
 	 */
 	public List<AnimalData> getAnimalList() throws IOException {
-
+		//リポジトリーのメソッドから動物一覧を取得
 		AnimalData[] animalsList = animalRepository.getAnimalList();
 
 		return Arrays.asList(animalsList);

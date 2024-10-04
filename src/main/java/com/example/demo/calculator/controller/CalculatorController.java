@@ -9,31 +9,34 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.calculator.service.CalculatorService;
 
 @Controller
-public class CalculatorController {
+public class CalculatorController {	
 	private final CalculatorService calculatorService;
-
+	
 	public CalculatorController(CalculatorService calculatorService) {
 		this.calculatorService = calculatorService;
 	}
-
 	@GetMapping("calculator")
-	public String showCalc() {
+	public String calulator() {
 		return "calculator.html";
 	}
-
+	
 	@PostMapping("calcResult")
-	public String calculator(@RequestParam("leftNum") int leftNum, @RequestParam("rightNum") int rightNum,
-			@RequestParam("operator") String operator, Model model) {
-		try {
-			int result;
-			result = calculatorService.calculation(leftNum, rightNum, operator);//①左辺②右辺③算術演算子
-			model.addAttribute("result", result);
-
-		} catch (ArithmeticException e) {
-			String errorMessage = "ゼロ除算はできません";
-			model.addAttribute("errorMessage", errorMessage);
-		}
-
+	public String numPlus(@RequestParam("leftNum") int leftNum,
+			@RequestParam("rightNum")int rightNum,@RequestParam("operator")String operator,
+			Model model) {
+			try {
+			int result = calculatorService.calculation(leftNum, rightNum, operator);
+			System.out.println(result);
+			model.addAttribute("result",result);
+			}catch (ArithmeticException e) {
+				String errorMassage = "0除算は出来ません。";
+				model.addAttribute("errorMessage", errorMassage);
+			}
 		return "calculator.html";
 	}
+	
+	
+	
 }
+
+

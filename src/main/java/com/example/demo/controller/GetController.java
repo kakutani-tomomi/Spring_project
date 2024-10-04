@@ -9,15 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
  
 @Controller
 public class GetController {
- 
-	@GetMapping("signUp")
-	public String showSignUpForm() {
-		return "signUp.html";
-	}
- 
+
 	@GetMapping("register")
 	public String registerUser(@RequestParam("name") String name, @RequestParam("birth") LocalDate birth, Model model) {
- 
+		
 		model.addAttribute("name", name);
 		model.addAttribute("birth", birth);
  

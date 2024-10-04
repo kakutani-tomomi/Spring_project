@@ -11,8 +11,9 @@ import com.example.demo.minus.service.MinusService;
 @Controller
 public class MinusController {
 
+	//serviceクラスのメソッドを利用するために、フィールドを定義。
 	private final MinusService minusService;
-
+	//serviceクラスのメソッドを利用するために、コンストラクタを使用して、フィールドにインスタンス情報を格納
 	public MinusController(MinusService minusServise) {
 		this.minusService = minusServise;
 	}
@@ -24,11 +25,11 @@ public class MinusController {
 
 	@PostMapping("minusResult")
 	public String minus(@RequestParam("leftNum") int leftNum, @RequestParam("rightNum") int rightNum, Model model) {
-
+		System.out.println(leftNum);
+		System.out.println(rightNum);
 		int result;
 		result = minusService.minusCalculation(leftNum, rightNum);
 		model.addAttribute("result", result);
-
 		return "minus.html";
 	}
 }

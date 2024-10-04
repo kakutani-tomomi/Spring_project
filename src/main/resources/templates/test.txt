@@ -22,4 +22,4 @@ http://localhost:8080/employeeList
 
 ■タスク切る
 netstat -ano | find "8080"
-taskkill /f /pid pidを記述
+taskkill /f /pid 19860
